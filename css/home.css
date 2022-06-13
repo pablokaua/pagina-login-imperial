@@ -1,0 +1,382 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Sarala:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background-color: #FFFFFF;
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+span {
+    color: rgba(0,255,0,0.5);
+}
+
+.header {
+    background-color: transparent;
+    backdrop-filter: blur(0.3rem);
+    padding: 2rem 6rem;
+    height: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.header-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.header-logo-image {
+    max-width: 3.5em;
+}
+
+.header-logo-texto {
+    font-family: 'Righteous', cursive;
+    font-weight: 400;
+    font-size: 1.8rem;
+    color: #FFFFFF;
+}
+
+.header-nav {
+    font-family: 'Sarala', sans-serif;
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    transition: all 0.5s;
+}
+
+.header-nav-item:nth-child(2n) {
+    color:gray;
+}
+
+.header-nav-item:first-child {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    color: #0d0c0c;
+    border: none;
+    background-color: #FFFFFF;
+    border-radius: 9rem;
+    height: 3rem;
+}
+
+.header-nav-item:first-child:hover {
+    border: 0.1rem solid #38d946;
+}
+
+.header-nav-item input {
+    border: none;
+    background-color: transparent;
+    outline: none;
+    width: 100%;
+}
+
+.header-nav-item:hover {
+    color:#38d946;
+    transition: all 0.4s;
+}
+
+.header-nav-item:last-child{
+    background-color: #38d946;
+    border-radius: 0.3rem;
+    padding: 0.8rem 1.4rem;
+}
+
+.header-nav-item:last-child:hover {
+    color: #FFFFFF;
+    background-color: #940101;
+    transition: all 0.4s;
+}
+
+.checkbox-btn {
+    color: #0d0c0c;
+    font-size: 2.2rem;
+    cursor: pointer;
+    display: none;
+}
+
+#checkbox {
+    display: none;
+}
+
+@media (max-width: 860px){
+    .checkbox-btn {
+        display: block;
+    }
+
+    .header-nav {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+		width: 100%;
+		height: 100vh;
+		background-color: rgba(0,0,0,0.8);
+		top: 100%;
+		left: -100%;
+		text-align: center;
+		transition: all .5s;
+    }
+
+    .header-nav-item:last-child{
+        background-color: transparent;
+    }
+
+    .header-nav-item:first-child {
+        border-radius: 0;
+        width: 100%;
+    }
+    
+    .header-nav-item:nth-child(2n){
+        color: #FFFFFF;
+    }
+
+    .header-nav-item {
+		margin: 0 0 2rem;
+		line-height: 30px;
+    }
+
+    #checkbox:checked ~ .header-nav{
+        left: 0; 
+    }    
+}
+
+main {
+    width: 100%;
+}
+
+.container {
+    background-color: #0d0c0c;
+    display: flex;
+    height: 100vh;
+}
+
+.container-image {
+    max-width: 40vw;
+}
+
+.container-infos {
+    display: flex;
+    justify-content: center;
+    width: 60vw;
+    padding: 3rem;
+    flex: 1;
+}
+
+.container-item {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.container-item-titulo {
+    font-family: 'Righteous', cursive;
+    font-weight: 400;
+    font-size: 8rem;
+    margin: 7rem 0 1rem;
+    flex-wrap: wrap;
+    color: #FFFFFF;
+}
+
+.container-item-subtitulo {
+    font-family: 'Sarala', sans-serif;
+    font-size: 3rem;
+    margin-bottom: 6rem;
+    color: gray;
+} 
+
+.container-item input {
+    font-family: 'Sarala', sans-serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 4rem;
+    padding: 2rem;
+    width: 100%;
+    background-color: gray;
+    color: #FFFFFF;
+    transition: all 0.5s;
+}
+
+.container-item input:hover {
+    background-color: rgba(0,255,0,0.5);
+    transition: all 0.5s;
+}
+
+.container-item-links {
+    display: flex;
+    gap: 3rem;
+    font-size: 2rem;
+    margin-top: 30rem;
+}
+
+.container-item-links a {
+    display: flex;
+    justify-content: center;
+    background-color: transparent;
+    width: 3rem;
+    height: 3rem;
+    padding: 0.6rem;
+    border-radius: 0.7rem;
+    box-shadow: 0 0 0.2rem rgba(255,255,255,0.4);
+}
+
+@media (max-width: 1100px){
+    .container-image {
+        display: none;
+    }
+}
+
+@media (max-width: 810px){
+    .container-item-links {
+        display: none;
+    }
+}
+
+.produtos {
+    display: flex;
+    flex-direction: column;
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+.produtos-titulo {
+    font-family: 'Righteous', cursive;
+    font-weight: 400;
+    font-size: 8rem;
+    margin: 5rem auto;
+}
+
+.roupas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.roupa {
+    width: 30rem;
+    margin: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    box-shadow: 0 0 0.3rem black;
+    border-radius: 1rem;
+    overflow: hidden;
+    transition: all 0.4s;
+    margin-bottom: 2rem;
+    cursor: pointer;
+}
+
+.roupa-image {
+    max-width: 30rem;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+
+.roupa-image:hover {
+    transform: scale(1.1);
+    transition: all 0.4s;
+}
+
+.roupa-titulo {
+    font-family: 'Sarala', sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.roupa-descricao {
+    font-family: 'Sarala', sans-serif;
+    font-size: 1.2rem;
+    color: gray;
+}
+
+.roupa-preco {
+    font-family: 'Sarala', sans-serif;
+    font-size: 1.6rem;
+    color: rgb(191, 108, 0);
+    margin: 1.5rem 0;
+}
+
+.produtos input {
+    margin: 2rem auto;
+    cursor: pointer;
+    font-family: 'Sarala', sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    background-color: #38d946;
+    color: #FFFFFF;
+    border: none;
+    padding: 1.2rem;
+    border-radius: 0.6rem;
+    transition: all 0.4s;
+}
+
+.produtos input:hover {
+    transform: scale(1.1);
+    transition: all 0.4s;
+}
+
+.imperial {
+    display: flex;
+    flex-direction: column;
+    max-width: 100rem;
+    margin: 0 auto;
+}
+
+.imperial-titulo {
+    font-family: 'Righteous', cursive;
+    font-weight: 400;
+    font-size: 8rem;
+    margin: 5rem auto;
+    justify-self: center;
+}
+
+.imperial-container img {
+    display: block;
+    max-width: 100%;
+    margin-bottom: 3rem;
+}
+
+.footer {
+    background-color: #0d0c0c;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 6rem;
+    height: 10%;
+}
+
+.footer-info {
+    display: flex;
+    font-family: 'Sarala', sans-serif;
+    font-size: 1.2rem;
+    gap: 3rem;
+}
+
+
+.footer-copy {
+    font-family: 'Sarala', sans-serif;
+    font-size: 1.2rem; 
+    color: #FFFFFF;
+}

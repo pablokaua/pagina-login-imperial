@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Sarala:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../img/background-imperial.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.header {
+    background-color: transparent;
+    backdrop-filter: blur(3rem);
+    border-bottom: 0.01rem solid rgba(255,255,255,0.2);
+    padding: 2rem 6rem;
+    height: 13%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.header-logo-image {
+    max-width: 3.5em;
+}
+
+.header-logo-texto {
+    font-family: 'Righteous', cursive;
+    font-weight: 400;
+    font-size: 1.8rem;
+    color: #FFFFFF;
+}
+
+.header-nav {
+    font-family: 'Sarala', sans-serif;
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    gap: 5.6rem;
+    transition: all 0.5s;
+}
+
+.header-nav-item:hover {
+    color:#38d946;
+    transition: all 0.4s;
+}
+
+.header-nav-item:first-child{
+    background-color: rgba(255,255,255,0.4);
+    border-radius: 0.3rem;
+    padding: 0.8rem 1.4rem;
+}
+
+.header-nav-item:first-child:hover {
+    color: #FFFFFF;
+    background-color: #38d946;
+    transition: all 0.4s;
+}
+
+.checkbox-btn {
+    color: #FFFFFF;
+    font-size: 2.2rem;
+    cursor: pointer;
+    display: none;
+}
+
+#checkbox {
+    display: none;
+}
+
+@media (max-width: 860px){
+    .checkbox-btn {
+        display: block;
+    }
+
+    .header-nav {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+		width: 100%;
+		height: 100vh;
+		background-color: rgba(0,0,0,0.8);
+		top: 100%;
+		left: -100%;
+		text-align: center;
+		transition: all .5s;
+    }
+
+    .header-nav-item:first-child{
+        background-color: transparent;
+    }
+    
+    .header-nav-item {
+		margin: 2rem 0;
+		line-height: 30px;
+    }
+
+    #checkbox:checked ~ .header-nav{
+        left: 0; 
+    }    
+}
+
+.container {
+    font-family: 'Sarala', sans-serif;
+    height: 77vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: 60rem;
+    padding-top: 8rem;
+}
+
+
+.container-input {
+    display: flex;
+    width: 100%;
+    height: 8rem;
+    background-color: rgba(0,0,0,0.5);
+    box-shadow: 0 0 1rem rgba(255, 255, 255, 0.2);
+    border-radius: 9rem;
+    margin-bottom: 2rem;
+    flex-shrink: 1;
+}
+
+
+.container-input input {
+    outline: none;
+    border: none;
+    width: 100%;
+    background-color: transparent;
+    color: #FFFFFF;
+}
+
+.container-input input::placeholder {
+    color: #FFFFFF;
+    font-size: 1.4rem;
+}
+
+
+.container-input i {
+    margin: 0 2rem;
+    align-self: center;
+    color: #FFFFFF;
+    font-size: 2rem;
+}
+
+.container form input[type="submit"] {
+    font-family: 'Righteous', cursive;
+    font-weight: 400;
+    font-size: 1.8rem;
+    color: #FFFFFF;
+    background-color: #38d946;
+    border: none;
+    border-radius: 9rem;
+    width: 100%;
+    height: 8rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.container form input[type="submit"]:hover {
+    letter-spacing: 0.1rem;
+    box-shadow: 0 0 2rem #38d946;
+    transition: all 0.3s;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 6rem;
+    height: 10%;
+    backdrop-filter: blur(1rem);
+    flex-wrap: wrap;
+}
+
+.footer-info {
+    display: flex;
+    font-family: 'Sarala', sans-serif;
+    font-size: 1.2rem;
+    gap: 3rem;
+}
+
+
+.footer-copy {
+    font-family: 'Sarala', sans-serif;
+    font-size: 1.2rem;
+    color: #FFFFFF;  
+}
