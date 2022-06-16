@@ -363,8 +363,10 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    align-content: flex-end;
     padding: 2rem 6rem;
     height: 10%;
+    flex-wrap: wrap;
 }
 
 .footer-info {
